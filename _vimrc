@@ -24,7 +24,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neocomplete'
+" NeoBundle 'Shougo/neocomplete'
+NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -243,3 +244,10 @@ endif
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 """"""""""""""""""""""""""""""
 filetype on
+
+
+""""""""""""""""""""""""""""""
+" vimでmacのトラックパッドスクロールを有効にする
+""""""""""""""""""""""""""""""
+set mouse=niv
+set clipboard=unnamed

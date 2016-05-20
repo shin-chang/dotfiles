@@ -1,20 +1,27 @@
 # 使い方
-
+## １．前準備
 - コンパイルのためgccパッケージが必要  
 ```bash
 sudo yum -y install gcc
 ```
 
-- 上記コマンドで生成したid-rsa.pubの中身をgithubに登録  
+- ローカル(好きなディレクトリ)にリポジトリをクローンする。
 ```bash
 git clone git@github.com:shin-chang/dotfiles.git  
+```
+
+## ２．インストール
+- vimrcを作成するため、dotfileディレクトリからシンボリックリンクを貼る
+
+```bash
 cd dotfiles/  
 ./dotfilesLink.sh  
 ```
-※rootでも.vimrcと、.vim/ のシンボリックリンクが必要。適宜名前を変更すること  
-```bash
-./dotfilesLink-for-root.sh  
-```
+
+※rootでも使いたい場合、.vimrcと、.vim/ のシンボリックリンクを貼る必要がある。  
+サンプルとして、```dotfilesLink.sh``` をおいているが、適宜ユーザ名を編集して使用してください  
+
+-  その他関連ファイルを
 
 ```bash
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim  
@@ -22,7 +29,7 @@ git clone https://github.com/Shougo/vimproc ~/.vim/bundle/vimproc
 cd ~/.vim/bundle/vimproc/  
 ```
 
-- vim を開いて、y(es) を押し、インストールする。ひたすらエンターキーを押す。  
+- vim を開くと、プラグインのインストールが始まる。ひたすらエンターキー 【y(es)】 を押し、インストールする。  
 ```
 vim  
 ```

@@ -21,7 +21,6 @@ endif
 "NeoBundleFetch 'Shougo/neobundle.vim'
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 " My Bundles here:
 NeoBundle 'scrooloose/nerdtree'
@@ -49,6 +48,7 @@ filetype plugin indent on     " Required!
 NeoBundleCheck
 autocmd vimenter * NERDTree
 
+call neobundle#end()
 
 """"""""""""""""""""""""""""""
 " 各種オプションの設定

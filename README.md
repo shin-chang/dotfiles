@@ -7,6 +7,7 @@ sudo yum -y install gcc
 
 - ローカル(好きなディレクトリでよい)に、メインファイルが集まるリポジトリをクローンする。
 ```bash
+cd "好きなディレクトリ"
 git clone git@github.com:shin-chang/dotfiles.git  
 ```
 
@@ -24,7 +25,7 @@ cd dotfiles/
 ./dotfilesLink.sh  
 ```
 
-※rootでも使いたい場合、.vimrcと、.vim/ のシンボリックリンクを貼る必要がある。  
+※rootでも使いたい場合、同様にrootフォルダ以下の .vimrcと、.vim/ にシンボリックリンクを貼る必要がある。  
 サンプルとして、```dotfilesLink-for-root.sh``` をおいているが、適宜ユーザ名を編集して使用してください  
 
 - vimprocディレクトリに移動し、vim を開くと、プラグインのコンパイルが始まる。ひたすらエンターキー 【y(es)】 を押し、インストールする。  

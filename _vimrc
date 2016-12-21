@@ -22,6 +22,13 @@ call dein#add('Shougo/neocomplete.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('bronson/vim-trailing-whitespace')
+call dein#add('Shougo/vimproc', {
+     \ 'build': {
+     \     'mac' : 'make -f make_mac.mak',
+     \     'linux' : 'make',
+     \     'unix' : 'gmake',
+     \    },
+     \ })
 
 call dein#end()
 
@@ -80,7 +87,7 @@ set binary noeol
 set expandtab
 
 " ファイルが更新されたら自動的にリロード
-set autoread 
+set autoread
 
 
 """"""""""""""""""""""""""""""

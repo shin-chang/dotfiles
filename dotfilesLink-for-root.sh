@@ -1,2 +1,2 @@
-ln -sf ~murakami/dotfiles/_vimrc ~root/.vimrc
-ln -sf ~murakami/dotfiles/vimfiles ~root/.vim
+ln -sf ~/dotfiles/_vimrc ~root/.vimrc
+ln -sf ~/dotfiles/vimfiles ~root/.vim

@@ -26,3 +26,6 @@ git clone https://github.com/Shougo/dein.vim.git \
 vim  
 (in vim)	:call dein#install()
 ```
+## ３．注意点  
+- vimのバージョンは7.4以降である必要あり（macならmacportでinstall）
+- UniteGrepできない場合は、vimprocを手動でmakeする必要有

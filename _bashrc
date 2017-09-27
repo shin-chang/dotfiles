@@ -58,8 +58,18 @@ alias ..7='cd ../../../../../../../'
 alias ..8='cd ../../../../../../../../'
 alias la='ls -aF'
 alias ll='ls -alF'
+alias cd='cd_proml'
+alias findf='find -type f -name'
+alias findd='find -type d -name'
+alias grep='grep --color=auto --no-messages --binary-files=without-match'
 
 # color
+function parse_git_branch {
+    type git > /dev/null 2>&1 | grep -i 'not found'
+    if [ $? -eq 1 ] ; then
+      \git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+    fi
+}
 function proml {
   pwd_str="$(pwd | sed -e "s|$HOME|~|")"
   prompt_str="[$(whoami)@$(hostname | cut -d'.' -f1):${pwd_str}$(parse_git_branch)]"
@@ -67,6 +77,11 @@ function proml {
   margin=$(printf "%${cols}s" "[$(date +'%Y-%m-%d %H:%M:%S')]" | cut -d'[' -f1)
   PS1="[${COLOR_LIGHT_RED}\u${COLOR_NC}${COLOR_LIGHT_GRAY}@\h${COLOR_NC}:${COLOR_LIGHT_CYAN}\w${COLOR_NC}${COLOR_LIGHT_BLUE}$(parse_git_branch)${COLOR_NC}]${margin}${COLOR_LIGHT_GREEN}[$(date +"%Y-%m-%d") \t]${COLOR_NC}\n$ "
 }
+function cd_proml {
+    \cd $1
+    proml
+}
+
 
 # unzip
 # --------------------------------------

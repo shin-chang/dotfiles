@@ -1,18 +1,11 @@
 # 使い方
-## １．前準備
+## init
 - home以下の.dotfilesに、vimの設定ファイルをクローンする。この時、自身のgithubにforkして、cloneするとなお良い
 ```bash
 git clone https://github.com/matsu0228/dotfiles.git ~/.dotfiles
 ```
 
-- vimパッケージを管理するためのdein.vimをクローンする。
-```bash
-mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
-git clone https://github.com/Shougo/dein.vim.git \
-  ~/.vim/dein/repos/github.com/Shougo/dein.vim
-```
-
-## ２．インストール
+## インストール
 - Vimの設定ファイル(.vimrc)を作成するため、.dotfilesディレクトリからシンボリックリンクを貼る
 
 ```bash
@@ -34,7 +27,7 @@ vim hoge
  source ~/.bashrc
 ```
 
-## ３．注意点  
+## 注意点  
 - vimのバージョンは7.4以降である必要あり（macならmacportでinstall）
 - UniteGrepできない場合は、vimprocを手動でmakeする必要有
 

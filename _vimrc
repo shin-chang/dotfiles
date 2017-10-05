@@ -32,6 +32,12 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('scrooloose/nerdtree')
   call dein#add('nathanaelkane/vim-indent-guides')
+  " for python
+  call dein#add('davidhalter/jedi-vim')
+  call dein#add('scrooloose/syntastic')
+  call dein#add('andviro/flake8-vim')
+  " for window
+  " for window
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('kana/vim-submode')
   call dein#add('Shougo/vimproc', {

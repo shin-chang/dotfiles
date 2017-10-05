@@ -35,6 +35,7 @@ if dein#load_state(s:dein_dir)
   " for python
   call dein#add('davidhalter/jedi-vim')
   call dein#add('scrooloose/syntastic')
+  call dein#add('Vimjas/vim-python-pep8-indent')
   call dein#add('andviro/flake8-vim')
   " for window
   " for window

@@ -32,12 +32,14 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('scrooloose/nerdtree')
   call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('tyru/caw.vim')
+  " markdown
+  call dein#add('plasticboy/vim-markdown')
   " for python
   call dein#add('davidhalter/jedi-vim')
   call dein#add('scrooloose/syntastic')
   call dein#add('Vimjas/vim-python-pep8-indent')
   call dein#add('andviro/flake8-vim')
-  " for window
   " for window
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('kana/vim-submode')
@@ -68,6 +70,13 @@ let g:airline_powerline_fonts = 1
 
 " load config
 runtime! config/init/*.vim
+
+" markdown
+
+augroup PrevimSetti=ngs
+  autocmd!
+  autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 "----------------------------------------------

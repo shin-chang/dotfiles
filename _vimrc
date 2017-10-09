@@ -70,13 +70,13 @@ let g:airline_powerline_fonts = 1
 
 " load config
 runtime! config/init/*.vim
-
 " markdown
-
 augroup PrevimSetti=ngs
   autocmd!
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+" vim-flake8
+autocmd BufWritePost *.py call Flake8()
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 "----------------------------------------------

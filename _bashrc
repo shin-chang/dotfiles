@@ -113,3 +113,28 @@ shopt -s nocaseglob
 
 # none-bell
 set bell-style none
+
+# git
+# --------------------------------------
+alias gc='git commit'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gdn='git diff --name-status'
+alias gl='git log'
+alias gb='git branch'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gsh='git show'
+alias gs='git status'
+alias gm='git mergetool'
+alias gri='git rebase -i'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gcp='git cherry-pick'
+alias gsb='git show-branch --current'
+
+# django
+# --------------------------------------
+alias sd='source deactivate'
+alias venv='source ./myvenv/bin/activate'
+alias rs='python manage.py runserver 0.0.0.0:8000'

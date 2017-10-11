@@ -76,7 +76,7 @@ augroup PrevimSetti=ngs
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 " vim-flake8
-autocmd BufWritePost *.py call Flake8()
+" autocmd BufWritePost *.py call Flake8()
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 "----------------------------------------------

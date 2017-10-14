@@ -22,7 +22,7 @@ let s:dein_dir = '~/.vim/dein/'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 " プラグイン読み込み＆キャッシュ作成 
 " let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/.dein.toml'
-if dein#load_state(s:dein_dir)  
+if dein#load_state(s:dein_dir)
   call dein#begin(expand('~/.vim/dein'))
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
@@ -34,12 +34,11 @@ if dein#load_state(s:dein_dir)
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('tyru/caw.vim')
   " front-end
-  call dein#add('tmattn/emmet-vim')
+  call dein#add('mattn/emmet-vim')
   call dein#add('majutsushi/tagbar')
   call dein#add('othree/yajs')
-  call dein#add('mtscout6/syntastic-local-eslint')
-  call dein#add('mtscout6/syntastic-local-eslint')
   call dein#add('hail2u/vim-css3-syntax')
+  " call dein#add('mtscout6/syntastic-local-eslint')
   " markdown
   call dein#add('plasticboy/vim-markdown')
   " for python
@@ -82,6 +81,15 @@ augroup PrevimSetti=ngs
   autocmd!
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+" Emmet ( <LEAD> , )
+let g:user_emmet_leader_key='<c-e>'
+" indent
+set tabstop=2 shiftwidth=2 expandtab
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
 " vim-flake8
 " autocmd BufWritePost *.py call Flake8()
 

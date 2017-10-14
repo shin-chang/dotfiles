@@ -118,6 +118,9 @@ set bell-style none
 # --------------------------------------
 alias gc='git commit'
 alias ga='git add'
+alias gll='git pull'
+alias glr='git pull --recursive'
+alias gsh='git push'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gdn='git diff --name-status'

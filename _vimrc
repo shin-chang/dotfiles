@@ -33,6 +33,13 @@ if dein#load_state(s:dein_dir)
   call dein#add('scrooloose/nerdtree')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('tyru/caw.vim')
+  " front-end
+  call dein#add('tmattn/emmet-vim')
+  call dein#add('majutsushi/tagbar')
+  call dein#add('othree/yajs')
+  call dein#add('mtscout6/syntastic-local-eslint')
+  call dein#add('mtscout6/syntastic-local-eslint')
+  call dein#add('hail2u/vim-css3-syntax')
   " markdown
   call dein#add('plasticboy/vim-markdown')
   " for python

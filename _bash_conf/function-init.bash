@@ -29,9 +29,40 @@ function wiki () {
   w3m "https://ja.wikipedia.org/wiki/$1" | head -n 50 | tail -n 40
 }
 
+# カレントパス以下のディレクトリでGrepマッチしたディレクトリに移動します 
+# -----------------------------------------
+function jj () {
+  if [ $1 ]; then
+    JUMPDIR=$(find . -type d -maxdepth 1 | grep $1 | tail -1)
+    if [[ -d $JUMPDIR && -n $JUMPDIR ]]; then
+      cd $JUMPDIR
+    else
+      echo "directory not found"
+    fi
+  fi
+}
 
+#
+# ---------------------------------------
+function cleanup () {
+  find . -type d -maxdepth 2 -empty -exec rmdir -v {} \; 2>/dev/null
+  find . -type d -maxdepth 2 -empty -exec rmdir -v {} \; 2>/dev/null
+}
 
-# unzip
+# for mac
+# Finderのアクティブウィンドウのパスにターミナルで移動します。
+function cdf () {
+  target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
+  if [ "$target" != "" ]
+  then
+    cd "$target"
+    pwd
+  else
+    echo 'No Finder window found' >&2
+  fi
+}
+
+#zip
 # --------------------------------------
 function extract () {
   if [ -f $1 ] ; then

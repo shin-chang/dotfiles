@@ -17,8 +17,10 @@ alias grep='grep --color=auto --no-messages --binary-files=without-match'
 alias hn='head -n'
 alias tn='tail -n'
 alias sb='source ~/.bashrc'
-
 alias md='vim ./*.md'
+alias up="cd ..; ls -l"
+
+
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac
   export LSCOLORS=xbfxcxdxbxegedabagacad
@@ -34,6 +36,12 @@ fi
 # require: translate-shell
 alias toj="trans {en=ja}"
 alias toe="trans {ja=en}"
+
+# require: z
+alias j="z"
+
+# for mac
+alias f="open ."
 
 # git
 # --------------------------------------

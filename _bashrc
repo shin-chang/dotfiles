@@ -59,8 +59,10 @@ alias ..8='cd ../../../../../../../../'
 alias la='ls -aF'
 alias ll='ls -alF'
 alias cd='cd_proml'
-alias findf='find -type f -name'
-alias findd='find -type d -name'
+alias ff='find . -type f -name'
+alias fd='find . -type d -name'
+alias dl='time aria2c -x10'
+alias grep='grep --color=auto --no-messages --binary-files=without-match'
 alias grep='grep --color=auto --no-messages --binary-files=without-match'
 
 # color

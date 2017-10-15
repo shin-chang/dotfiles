@@ -26,13 +26,16 @@ if dein#load_state(s:dein_dir)
   call dein#begin(expand('~/.vim/dein'))
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
-  call dein#add('Shougo/neocomplete.vim')
   call dein#add('scrooloose/nerdtree')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('scrooloose/nerdtree')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('tyru/caw.vim')
+  "snipets
+  call dein#add('Shougo/neocomplete')
+  call dein#add('Shougo/neosnippet')
+  call dein#add('Shougo/neosnippet-snippets')
   " front-end
   call dein#add('mattn/emmet-vim')
   call dein#add('majutsushi/tagbar')
@@ -87,6 +90,7 @@ let g:user_emmet_leader_key='<c-e>'
 set tabstop=2 shiftwidth=2 expandtab
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'Normal']
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 

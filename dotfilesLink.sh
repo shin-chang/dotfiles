@@ -16,11 +16,14 @@ mkdir ~/.bash
 ln -sf ~/.dotfiles/_bash_conf/ ~/.bash/conf
 ln -sf ~/.dotfiles/_inputrc     ~/.inputrc
 echo -e "you should write following in your ~/.bashrc
-  
-  bash_conf=~/.bash/conf
-  . $bash_conf/alias-init.bash    # aliasの設定
-  . $bash_conf/function-init.bash # 関数の設定
-  . $bash_conf/prompt-init.bash   # プロンプトの設定
 
+# for load bash_conf
+bash_conf=~/.bash/conf
+. $bash_conf/alias-init.bash    # aliasの設定
+. $bash_conf/function-init.bash # 関数の設定
+. $bash_conf/prompt-init.bash   # プロンプトの設定
+
+# for z
+. /usr/local/etc/profile.d/z.sh
 "
 

@@ -53,6 +53,3 @@ shopt -s nocaseglob
 PATH="$PATH":/usr/local/src/tree-tagger/cmd
 PATH="$PATH":/usr/local/src/tree-tagger/bin
 export PATH=$PATH
-
-# for z
-. /usr/local/etc/profile.d/z.sh

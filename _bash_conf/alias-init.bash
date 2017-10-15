@@ -11,11 +11,24 @@ alias ..5='cd ../../../../../'
 alias ..6='cd ../../../../../../'
 alias ..7='cd ../../../../../../../'
 alias ..8='cd ../../../../../../../../'
-alias la='ls -aF'
-alias ll='ls -alF'
 alias ff='find . -type f -name'
 alias fd='find . -type d -name'
 alias grep='grep --color=auto --no-messages --binary-files=without-match'
+alias hn='head -n'
+alias tn='tail -n'
+alias sb='source ~/.bashrc'
+
+# ls
+if [ "$(uname)" = 'Darwin' ]; then # for mac
+  export LSCOLORS=xbfxcxdxbxegedabagacad
+  alias ls='ls -G'
+  alias la='ls -aF -G'
+  alias ll='ls -alF -G'
+else # for linux
+  alias ls='ls --color=auto'
+  alias la='ls -aF --color=auto'
+  alias ll='ls -alF --color=auto'
+fi
 
 # git
 # --------------------------------------

@@ -18,6 +18,7 @@ alias hn='head -n'
 alias tn='tail -n'
 alias sb='source ~/.bashrc'
 
+alias md='vim ./*.md'
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac
   export LSCOLORS=xbfxcxdxbxegedabagacad
@@ -29,6 +30,10 @@ else # for linux
   alias la='ls -aF --color=auto'
   alias ll='ls -alF --color=auto'
 fi
+
+# require: translate-shell
+alias toj="trans {en=ja}"
+alias toe="trans {ja=en}"
 
 # git
 # --------------------------------------

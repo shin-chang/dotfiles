@@ -21,6 +21,16 @@ function cd_proml {
 }
 alias cd='cd_proml'
 
+# requre: w3m
+function dic () {
+  w3m "http://ejje.weblio.jp/content/$1" | grep -e '1 ' -e '2 ' -e '3 ' -e "とは" -e "用例"
+}
+function wiki () {
+  w3m "https://ja.wikipedia.org/wiki/$1" | head -n 50 | tail -n 40
+}
+
+
+
 # unzip
 # --------------------------------------
 function extract () {

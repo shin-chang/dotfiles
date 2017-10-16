@@ -19,7 +19,8 @@ alias tn='tail -n'
 alias sb='source ~/.bashrc'
 alias md='vim ./*.md'
 alias up="cd ..; ls -l"
-
+alias cdl='a=(`ls -1`) ; ls -1 | cat -n ; read b ; cd ${a[$b-1]}'
+alias rgrep='find . -name "*.svn*" -prune -o -type f -print0 | xargs -0 grep'
 
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac
@@ -36,6 +37,9 @@ fi
 # require: translate-shell
 alias toj="trans {en=ja}"
 alias toe="trans {ja=en}"
+
+# require: aria2
+alias dl='time aria2c -x10'
 
 # require: z
 alias j="z"

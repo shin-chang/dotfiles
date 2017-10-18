@@ -21,7 +21,7 @@ alias md='vim ./*.md'
 alias up="cd ..; ls -l"
 alias cdl='a=(`ls -1`) ; ls -1 | cat -n ; read b ; cd ${a[$b-1]}'
 alias rgrep='find . -name "*.svn*" -prune -o -type f -print0 | xargs -0 grep'
-
+alias ml='vim -c MemoNew '
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac
   export LSCOLORS=xbfxcxdxbxegedabagacad
@@ -47,6 +47,9 @@ alias j="z"
 # for mac
 alias f="open ."
 
+# front-end
+# --------------------------------------
+alias nr='npm run-script'
 # git
 # --------------------------------------
 alias gc='git commit'

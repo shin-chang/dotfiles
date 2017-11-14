@@ -36,8 +36,8 @@ else # for linux
 fi
 
 # require: translate-shell
-alias toj="trans {en=ja}"
-alias toe="trans {ja=en}"
+alias toj="trans -b {en=ja}"
+alias toe="trans -b {ja=en}"
 
 # require: aria2
 alias dl='time aria2c -x10'

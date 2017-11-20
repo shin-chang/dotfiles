@@ -49,7 +49,9 @@ if dein#load_state(s:dein_dir)
   call dein#add('davidhalter/jedi-vim')
   call dein#add('scrooloose/syntastic')
   call dein#add('Vimjas/vim-python-pep8-indent')
-  call dein#add('andviro/flake8-vim')
+  " call dein#add('andviro/flake8-vim')
+  " go
+  call dein#add('fatih/vim-go')
   " for window
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('kana/vim-submode')
@@ -80,6 +82,11 @@ let g:airline_powerline_fonts = 1
 
 " load config
 runtime! config/init/*.vim
+" go
+augroup PrevimSetti=ngs
+  autocmd!
+  autocmd BufNewFile,BufRead *.{go} set filetype=go
+augroup END
 " markdown
 augroup PrevimSetti=ngs
   autocmd!

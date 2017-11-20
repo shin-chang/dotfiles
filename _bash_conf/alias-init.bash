@@ -79,3 +79,8 @@ alias gsb='git show-branch --current'
 alias sd='source deactivate'
 alias venv='source ./myvenv/bin/activate'
 alias rs='python manage.py runserver 0.0.0.0:8000'
+
+# golan
+#--------------------------------------
+alias sg='source ~/.gvm/scripts/gvm'
+

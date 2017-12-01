@@ -72,7 +72,7 @@ alias glr='git pull --recursive'
 alias gps='git push'
 alias gdc='git diff --cached'
 alias gdn='git diff --name-status'
-alias gl='git log --oneline --pretty=format:'%h [%cd] %d %s <%an>' --date=format:'%Y/%m/%d'"
+alias gl="git log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso"
 alias gb='git branch'
 alias gco='git checkout'
 alias gcom='git checkout master'

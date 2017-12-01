@@ -1,0 +1,11 @@
+# $ vim ~/.gitconfig
+# ------------------------------
+# [include]
+# path = ~/.dotfiles/_gitconfig_for_include
+# [user]
+# name=matsu0228
+# email=
+
+
+[color]
+  ui = true

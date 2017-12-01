@@ -38,6 +38,14 @@ else # for linux
   alias ll='ls -alF --color=auto'
 fi
 
+# require colordiff
+if [[ -x `which colordiff` ]]; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff -u'
+fi
+export LESS='-R'
+
 # require: translate-shell
 alias toj="trans -b {en=ja}"
 alias toe="trans -b {ja=en}"

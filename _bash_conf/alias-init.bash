@@ -49,9 +49,10 @@ export LESS='-R'
 
 # less for source
 # require source-highlight
-if [[ -x `which colordiff` ]]; then
-  alias hilite='/usr/bin/src-hilite-lesspipe.sh'
-  export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
+HILITE="/usr/bin/src-hilite-lesspipe.sh"
+if [ -f "${HILITE}" ]; then
+  alias hilite="${HILITE}"
+  export LESSOPEN="| ${HILITE} %s"
 fi
 
 # require: translate-shell

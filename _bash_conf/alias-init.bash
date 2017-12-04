@@ -14,8 +14,8 @@ alias ..7='cd ../../../../../../../'
 alias ..8='cd ../../../../../../../../'
 alias ff='find . -type f -name'
 alias fd='find . -type d -name'
-alias grep='grep --color=auto --no-messages --binary-files=without-match'
-alias less='less -N -M'
+alias grep='grep --color=always --with-filename --no-messages --binary-files=without-match'
+# alias less='less -N -M'
 alias hn='head -n'
 alias tn='tail -n'
 alias sb='source ~/.bashrc'
@@ -25,6 +25,7 @@ alias cdl='a=(`ls -1`) ; ls -1 | cat -n ; read b ; cd ${a[$b-1]}'
 alias rgrep='find . -name "*.svn*" -prune -o -type f -print0 | xargs -0 grep'
 alias ml='vim -c MemoNew '
 alias dus='du ./ -b | sort -rn | numfmt --to=iec --suffix=B --padding=5'
+
 
 # ls
 if [ "$(uname)" = 'Darwin' ]; then # for mac
@@ -45,6 +46,13 @@ else
   alias diff='diff -u'
 fi
 export LESS='-R'
+
+# less for source
+# require source-highlight
+if [[ -x `which colordiff` ]]; then
+  alias hilite='/usr/bin/src-hilite-lesspipe.sh'
+  export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
+fi
 
 # require: translate-shell
 alias toj="trans -b {en=ja}"

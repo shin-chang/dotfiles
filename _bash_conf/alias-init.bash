@@ -49,8 +49,8 @@ export LESS='-R'
 
 # less for source
 # require source-highlight
-HILITE="/usr/bin/src-hilite-lesspipe.sh"
-if [ -f "${HILITE}" ]; then
+HILITE="src-hilite-lesspipe.sh"
+if [[ -x `which ${HILITE}` ]]; then
   alias hilite="${HILITE}"
   export LESSOPEN="| ${HILITE} %s"
 fi

@@ -65,6 +65,9 @@ alias dl='time aria2c -x10'
 # require: z
 alias j="z"
 
+# require:pandoc
+alias pandoc="pandoc_with_github"
+
 # for mac
 alias f="open ."
 

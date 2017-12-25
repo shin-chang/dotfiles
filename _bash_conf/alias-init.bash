@@ -25,6 +25,7 @@ alias cdl='a=(`ls -1`) ; ls -1 | cat -n ; read b ; cd ${a[$b-1]}'
 alias rgrep='find . -name "*.svn*" -prune -o -type f -print0 | xargs -0 grep'
 alias ml='vim -c MemoNew '
 alias dus='du ./ -b | sort -rn | numfmt --to=iec --suffix=B --padding=5'
+alias vg='vagrant'
 
 
 # ls
